@@ -18,12 +18,17 @@ public class ModItems {
     public static final RegistryObject<Item> ZIRCON = ITEMS.register("zircon",
             ()-> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
+    public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
+            ()-> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
     public static final RegistryObject<Item> UNOBTAINIUM = ITEMS.register("unobtainium",
             ()-> new Item(new Item.Properties()
                             .tab(CreativeModeTab.TAB_MISC)
                             .stacksTo(16)
                             .food(Foods.APPLE)
             ));
+
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
