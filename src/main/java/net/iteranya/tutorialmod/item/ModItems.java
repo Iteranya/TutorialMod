@@ -14,16 +14,15 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
-
     public static final RegistryObject<Item> ZIRCON = ITEMS.register("zircon",
-            ()-> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            ()-> new Item(new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
-            ()-> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            ()-> new Item(new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<Item> UNOBTAINIUM = ITEMS.register("unobtainium",
             ()-> new Item(new Item.Properties()
-                            .tab(CreativeModeTab.TAB_MISC)
+                            .tab(ModCreativeModTab.TUTORIAL_TAB)
                             .stacksTo(16)
                             .food(Foods.APPLE)
             ));

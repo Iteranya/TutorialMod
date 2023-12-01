@@ -1,6 +1,7 @@
 package net.iteranya.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.iteranya.tutorialmod.block.ModBlocks;
 import net.iteranya.tutorialmod.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,6 +25,7 @@ public class TutorialMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
