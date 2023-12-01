@@ -38,12 +38,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ZIRCON_BLOCK =
             registerBlock("zircon_block", ()-> new Block(
-                    BlockBehaviour.Properties.of(Material.STONE).strength(500f).requiresCorrectToolForDrops()
+                    BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()
             ),ModCreativeModTab.TUTORIAL_TAB);
 
     public static final RegistryObject<Block> ZIRCON_ORE =
             registerBlock("zircon_ore", ()-> new DropExperienceBlock(
-                    BlockBehaviour.Properties.of(Material.STONE).strength(500f).requiresCorrectToolForDrops(),
+                    BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops(),
                     UniformInt.of(6,9)
             ),ModCreativeModTab.TUTORIAL_TAB);
 

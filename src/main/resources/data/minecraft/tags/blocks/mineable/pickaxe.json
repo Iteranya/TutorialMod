@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "tutorialmod:unobtainium_block",
+    "tutorialmod:zircon_block",
+    "tutorialmod:zircon_ore"
+  ]
+}
