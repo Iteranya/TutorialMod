@@ -1,6 +1,7 @@
 package net.iteranya.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.iteranya.tutorialmod.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -16,11 +17,13 @@ import org.slf4j.Logger;
 public class TutorialMod
 {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "examplemod";
+    public static final String MOD_ID = "tutorialmod";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public TutorialMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
