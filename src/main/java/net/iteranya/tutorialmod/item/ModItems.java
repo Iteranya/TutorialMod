@@ -1,10 +1,11 @@
 package net.iteranya.tutorialmod.item;
 
 import net.iteranya.tutorialmod.TutorialMod;
+import net.iteranya.tutorialmod.item.custom.BeegSwordItem;
+import net.iteranya.tutorialmod.item.custom.EightBallItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,13 +20,18 @@ public class ModItems {
 
     public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
             ()-> new Item(new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB)));
-
     public static final RegistryObject<Item> UNOBTAINIUM = ITEMS.register("unobtainium",
-            ()-> new Item(new Item.Properties()
+            ()-> new EightBallItem(
+                    new Item.Properties()
                             .tab(ModCreativeModTab.TUTORIAL_TAB)
-                            .stacksTo(16)
-                            .food(Foods.APPLE)
+                            .stacksTo(1)
             ));
+
+    public static final RegistryObject<Item> BEEG_SWORD = ITEMS.register( "beeg_sword",
+            ()-> new BeegSwordItem(Tiers.DIAMOND,50, 0.8f,
+                    new SwordItem.Properties()
+                            .tab(ModCreativeModTab.TUTORIAL_TAB)
+                            .stacksTo(1)));
 
 
 
